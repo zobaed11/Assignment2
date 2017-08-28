@@ -11,37 +11,20 @@ public class lineNumber implements activity {
 
 
 
-	public void dojob(File file)  {
-		try { int count=0;
-			InputStream is = new FileInputStream (file);
-			BufferedReader buf = new BufferedReader(new InputStreamReader(is));
-			try {
-				String line=buf.readLine(); StringBuilder sb= new StringBuilder();
-				while(line != null){
-					   sb.append(line).append("\n");
-					   line = buf.readLine();
-					}
-					  
-				String fsa=sb.toString();
-				char a[]= fsa.toCharArray();
+	public void dojob(char [] chararray, String st, File string, String Keyword)  {
+		int count =0;
 				//System.out.println(file.length());
-				for (int i=0; i<=file.length();i++)
+				for (int i=0; i<st.length();i++)
 				 {
 					 
 					 
-					 if (a[i]=='\n') count++; 
+					 if (chararray[i]=='\n') count++; 
 				 } 
 					System.out.println(count);
 
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			} 
 			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		 
 		 
 		
 		/*char[] c = new char[1024];
@@ -57,4 +40,4 @@ public class lineNumber implements activity {
 		  
 	}
 	
-}
+
